@@ -324,3 +324,36 @@ section {
   transition: all 0.2s ease;
 }
 
+
+/* ===== ZERO-RISK UI IMPROVEMENTS ===== */
+
+/* Improve readability */
+p {
+  max-width: 65ch;
+}
+
+/* Subtle section separation */
+section + section {
+  border-top: 1px solid #f0f0f0;
+}
+
+/* Better button feedback */
+.btn-outline:hover {
+  background: var(--green-light);
+}
+
+/* Slightly softer project text */
+.project-card p {
+  color: #555;
+}
+
+/* Improve hero label visibility */
+.hero-label {
+  opacity: 0.85;
+}
+
+/* Smooth transitions (safe) */
+.project-card, .cert-card, .btn-solid, .btn-outline {
+  transition: all 0.2s ease;
+}
+
