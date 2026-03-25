@@ -426,3 +426,20 @@ footer p {
   margin: 0 auto;
 }
 
+
+/* ===== FIX CONTACT SECTION ALIGNMENT ===== */
+footer,
+footer * {
+  text-align: center !important;
+}
+
+footer {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+footer p {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
