@@ -358,3 +358,17 @@ section + section {
 }
 
 @media (max-width: 768px) { .timeline-item { grid-template-columns: 1fr !important; } .timeline-meta { margin-bottom: 0.5rem; } }
+
+@media (max-width: 768px) {
+  .timeline-item {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .timeline-meta {
+    width: 100% !important;
+  }
+  .timeline-content {
+    width: 100% !important;
+  }
+}
+
