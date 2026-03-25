@@ -108,3 +108,25 @@ section h2 {
   gap: 2rem;
 }
 
+
+/* FORCE COMPACT LAYOUT */
+#hero {
+  padding: 4rem 2rem 2rem !important;
+}
+
+section {
+  padding: 2.5rem 2rem !important;
+}
+
+section h2 {
+  margin-bottom: 1rem !important;
+}
+
+.timeline {
+  gap: 1.5rem !important;
+}
+
+.timeline-item {
+  padding-bottom: 1.5rem !important;
+}
+
