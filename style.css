@@ -288,3 +288,39 @@ section {
   padding-bottom: 3.5rem;
 }
 
+
+/* ===== SAFE UI IMPROVEMENTS (NON-BREAKING) ===== */
+
+/* Better hierarchy */
+section h2 {
+  font-size: 2.2rem;
+  letter-spacing: -0.3px;
+}
+
+/* Subtle card depth */
+.project-card, .cert-card {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Gentle hover */
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Slightly cleaner spacing */
+section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Skills look cleaner */
+.skills span {
+  background: #f7f7f7;
+  font-weight: 500;
+}
+
+/* Smooth transitions */
+.project-card, .cert-card, .btn-solid {
+  transition: all 0.2s ease;
+}
+
