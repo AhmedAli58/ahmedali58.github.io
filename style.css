@@ -357,3 +357,4 @@ section + section {
   transition: all 0.2s ease;
 }
 
+@media (max-width: 768px) { .timeline-item { grid-template-columns: 1fr !important; } .timeline-meta { margin-bottom: 0.5rem; } }
