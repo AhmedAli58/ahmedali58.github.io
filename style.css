@@ -475,3 +475,23 @@ footer p {
   margin-right: auto !important;
 }
 
+
+/* ===== FIX CONTACT SECTION TEXT (ACTUAL FIX) ===== */
+footer,
+#contact {
+  text-align: center;
+}
+
+#contact p {
+  margin: 0 auto;
+  text-align: center !important;
+}
+
+
+/* ===== FINAL CLEAN FIX ===== */
+section:last-of-type > p:first-of-type {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 1.5rem auto;
+}
+
