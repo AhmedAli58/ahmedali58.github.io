@@ -495,3 +495,14 @@ section:last-of-type > p:first-of-type {
   margin: 0 auto 1.5rem auto;
 }
 
+
+/* ===== CORRECT CONTACT ALIGNMENT ===== */
+#contact {
+  text-align: center;
+}
+
+#contact p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
