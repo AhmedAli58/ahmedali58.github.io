@@ -236,3 +236,55 @@ body {
   padding: 0 4%;
 }
 
+
+/* ===== SAFE UI POLISH ===== */
+
+/* Smooth hover everywhere */
+* {
+  transition: all 0.2s ease;
+}
+
+/* Improve section headings */
+section h2 {
+  letter-spacing: -0.5px;
+}
+
+/* Cards feel premium */
+.project-card,
+.cert-card {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+}
+
+/* Better hover (non-breaking) */
+.project-card:hover,
+.cert-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Buttons feel modern */
+.btn-solid {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.btn-solid:hover {
+  transform: translateY(-1px);
+}
+
+/* Skills pills cleaner */
+.skills span {
+  border: none;
+  background: #f0f0f0;
+}
+
+/* Nav cleaner */
+#nav {
+  border-bottom: 1px solid #eee;
+}
+
+/* Reduce harsh spacing visually */
+section {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
