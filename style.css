@@ -31,7 +31,7 @@ ul { list-style: none; }
 .btn-outline { display: inline-block; border: 1.5px solid var(--gray-200); color: var(--gray-700); padding: 0.65rem 1.4rem; border-radius: 8px; font-weight: 400; font-size: 0.95rem; transition: border-color var(--transition), color var(--transition); }
 .btn-outline:hover { border-color: var(--green); color: var(--green); }
 .btn-sm { padding: 0.4rem 1rem; font-size: 0.85rem; }
-section { max-width: var(--max-width); margin: 0 auto; padding: 6rem 2rem; }
+section { max-width: var(--max-width); margin: 0 auto; padding: 3rem 2rem; }
 section h2 { font-family: var(--font-display); font-size: 2rem; font-weight: 400; color: var(--black); margin-bottom: 3rem; padding-bottom: 1rem; border-bottom: 2px solid var(--green-light); }
 #hero { max-width: var(--max-width); margin: 0 auto; padding: 8rem 2rem 6rem; display: flex; align-items: center; justify-content: space-between; gap: 4rem; }
 .hero-text { flex: 1; }
@@ -97,5 +97,14 @@ section {
 #hero {
   max-width: 900px;
   margin: 0 auto;
+}
+
+
+section h2 {
+  margin-bottom: 1.5rem;
+}
+
+.timeline {
+  gap: 2rem;
 }
 
