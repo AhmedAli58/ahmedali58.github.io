@@ -506,3 +506,15 @@ section:last-of-type > p:first-of-type {
   margin: 0 auto;
 }
 
+
+/* ===== DEBUGGED FIX ===== */
+#contact {
+  text-align: center;
+}
+
+#contact p {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
