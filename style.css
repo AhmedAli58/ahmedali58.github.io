@@ -396,3 +396,18 @@ section + section {
 
 }
 
+
+/* ===== HARD MOBILE OVERRIDE ===== */
+@media screen and (max-width: 768px) {
+
+  .timeline-item {
+    display: block !important;
+  }
+
+  .timeline-item > * {
+    width: 100% !important;
+    display: block !important;
+  }
+
+}
+
