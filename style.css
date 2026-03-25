@@ -26,7 +26,7 @@ ul { list-style: none; }
 #nav ul { display: flex; gap: 2rem; align-items: center; }
 #nav ul a { font-size: 0.9rem; font-weight: 400; color: var(--gray-700); transition: color var(--transition); }
 #nav ul a:hover { color: var(--green); }
-.nav-cta { background: var(--green) !important; color: var(--white) !important; padding: 0.4rem 1rem; border-radius: 6px; font-weight: 500 !important; transition: background var(--transition) !important; }
+.nav-cta { background: var(--green) !important; color: var(--white) !important; padding: 0.4rem 1rem; border-radius: 6px; font-weight: 500 !important; }
 .nav-cta:hover { background: var(--green-dark) !important; }
 .btn-solid { display: inline-block; background: var(--green); color: var(--white); padding: 0.65rem 1.4rem; border-radius: 8px; font-weight: 500; font-size: 0.95rem; transition: background var(--transition); }
 .btn-solid:hover { background: var(--green-dark); }
