@@ -458,3 +458,20 @@ footer > * {
   margin-right: auto;
 }
 
+
+/* ===== FIX CONTACT TEXT ALIGNMENT (CORRECT TARGET) ===== */
+footer p:first-of-type {
+  display: block;
+  width: 100%;
+  text-align: center !important;
+  margin: 0 auto 1.5rem auto !important;
+}
+
+
+/* ===== FORCE CENTER CONTACT TEXT (FINAL) ===== */
+footer p {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
