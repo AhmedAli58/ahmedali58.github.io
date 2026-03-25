@@ -13,19 +13,17 @@
 </head>
 <body>
 
-  <!-- ── NAV ── -->
   <nav id="nav">
     <span class="nav-name">Ahmed Ali</span>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#certifications">Certifications</a></li>
+      <li><ef="#certifications">Certifications</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- ── HERO ── -->
   <section id="hero">
     <div class="hero-text">
       <p class="hero-label">Based in Munich, Germany</p>
@@ -43,7 +41,6 @@
     </div>
   </section>
 
-  <!-- ── ABOUT ── -->
   <section id="about">
     <h2>About</h2>
     <p class="about-text">I am a data and business analyst with experience across healthcare and commercial sectors, currently pursuing an MSc in Chemical Biotechnology at the Technical University of Munich. I build dashboards, predictive models and data pipelines that help organisations make faster, better-informed decisions.</p>
@@ -54,13 +51,147 @@
     </div>
   </section>
 
-  <!-- ── EXPERIENCE ── -->
   <section id="experience">
     <h2>Experience</h2>
     <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-meta">
+          <span class="timeline-date">Nov 2024 — Jul 2025</span>
+          <span class="timeline-location">Manhattan, Kansas, US</span>
+        </div>
+        <div class="timeline-content">
+          <h3>Business Analyst</h3>
+          <p class="timeline-company">Targon LLC</p>
+        <ul>
+            <li>Built revenue and margin dashboards tracking KPIs including contribution margin, discount rate and SKU-level profitability, improving gross margin performance by 8% over two quarters.</li>
+            <li>Analysed 20,000+ customer transaction records using SQL and Excel, reducing pricing inconsistencies and stabilising monthly margin fluctuations by 12%.</li>
+            <li>Automated data preparation workflows with SQL and Python, improving reporting efficiency by 15% and minimising reconciliation errors.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-meta">
+          <span class="timeline-date">Nov 2023 — Apr 2024</span>
+          <span class="timeline-location">Islamabad, Pakistan</span>
+        </div>
+        <div class="timeline-content">
+          <h3>Data Analyst</h3>
+          <p class="timeline-company">Maroof International Hospital</p>
+          <ul>
+            <li>Designed interactive dashboards visualising ilisation rate, cost per procedure and turnaround time, improving reporting efficiency by 18%.</li>
+            <li>Analysed equipment scheduling and utilisation logs, identifying underutilised capacity that reduced idle equipment hours by 10%.</li>
+            <li>Implemented validation checks across multi-source datasets, decreasing recurring reporting corrections by approximately 30%.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
   </section>
 
-  <!-- ── FOOTER / CONTACT ── -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Credit Card Fraud Detection</h3>
+          <div class="project-tags"><span>Machine Learning</span><span>Python</span><span>Streamlit</span></div>
+        </div>
+        <p>Built an end-to-end fraud detection system using classification models on imbalanced financial transaction data. Deployed as an interactive Streamlit application.</p>
+        <div class="project-links">
+          <a href="https://credit-card-fraud-detection-33azof3lzauheeppgmaxzx.streamlit.app" target="_blank" class="btn-solid btn-sm">Live Demo</a>
+          <a href="https://github.com/AhmedAli58" target="_blank" class="btn-outline btn-sm">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>AutoScout24 Car Price Analysis</h3>
+          <div class="project-tags"><span>EDA</span><span>Random Forest</span><span>Python</span></div>
+        </div>
+        <p>Analysed 120K AutoScout24 listings to uncover what drives used car prices in Germany. Random Forest model achieved R² of 0.92 on price prediction.</p>
+        <div class="project-links">
+          <a href="https://github.com/AhmedAli58/AutoScout24-Car-Price-Analysis" target="_blank" class="btn-solid btn-sm">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Olist E-Commerce Sales Analysis</h3>
+          <div class="project-tags">span>EDA</span><span>RFM</span><span>Python</span></div>
+        </div>
+        <p>End-to-end sales strategy analysis on 100K orders from Olist, a Brazilian e-commerce marketplace. Includes RFM segmentation, YoY growth analysis and delivery performance.</p>
+        <div class="project-links">
+          <a href="https://github.com/AhmedAli58/Olist-E-Commerce-Sales-Analysis" target="_blank" class="btn-solid btn-sm">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Twitter Sentiment Analysis</h3>
+          <div class="project-tags"><span>NLP</span><span>Python</span><span>Classification</span></div>
+        </div>
+        <p>Sentiment classification pipeline on Twitter data using NLP techniques and machine learning models to detect positive, negative and neutral sentiment at scale.</p>
+        <div class="project-links">
+          <a href="https://github.com/AhmedAli58" target="_blank" class="btn-outline btn-sm">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Tabular ML Regression Pipeline</h3>
+          <div class="project-tags"><span>scikit-learn</span><span>Regression</span><span>Python</span></div>
+        </div>
+        <p>Modular end-to-end regression pipeline for tabular data covering preprocessing, feature engineering, model selection and evaluation with cross-validation.</p>
+        <div class="project-links">
+          <a href="https://github.com/AhmedAli58" target="_blank" class="btn-outline btn-sm">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="certs-grid">
+      <a href="https://www.credly.com/badges/29cad2c1-15d1-412f-9249-3cf115c61890/linked_in_profile" target="_blank" class="cert-card">
+        <p class="cert-name">Alteryx Designer Core</p>
+        <p class="cert-issuer">Alteryx</p>
+      </a>
+      <a href="https://credentials.getdbt.com/69fb949c-9ad4-4a5b-9b9d-882054bd9fff" target="_blank" class="cert-card">
+        <p class="cert-name">dbt Fundamentals</p>
+        <p class="cert-issuer">dbt Labs</p>
+      </a>
+      <a href="https://www.hackerrank.com/certificates/0b0177754b5f" target="_blank" class="cert-card">
+        <p class="cert-name">SQL Certificate</p>
+        <p class="cert-issuer">HackerRank</p>
+      </a>
+      <a href="https://www.hackerrank.com/certificates/b0d21ae80aa6" target="_blank" class="cert-card">
+        <p class="cert-name">Python Certificate</p>
+        <p class="cert-issuer">HackerRank</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-meta">
+          <span class="timeline-date">Apr 2024 — Aug 2026</span>
+          <span class="timeline-location">Munich, Germany</span>
+        </div>
+        <div class="timeline-content">
+          <h3>MSc Chemical Biotechnology</h3>
+          <p class="timeline-compan>Technical University of Munich</p>
+          <p style="font-size:0.95rem;color:#444444;line-height:1.7;margin-top:0.5rem;">Recently completed a research internship at TUM's Chair of Organic Chemistry II, applying chemical proteomics to investigate gut microbiome-drug interactions. Used large-scale protein profiling datasets to identify bacterial drug targets, translating complex biological data into structured analytical findings across multiple experimental conditions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer id="contact">
     <h2>Get in touch</h2>
     <p>Open to data analyst and business analyst roles in Germany and Europe.</p>
