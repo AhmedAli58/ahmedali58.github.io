@@ -1,180 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ahmed Ali — Data & Business Analyst based in Munich, Germany. Portfolio of data analysis, machine learning and business intelligence projects." />
-  <meta name="author" content="Ahmed Ali" />
-  <title>Ahmed Ali — Data & Business Analyst</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+python3 << 'EOF'
+content = open('index.html').read()
 
-  <nav id="nav">
-    <span class="nav-name">Ahmed Ali</span>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#contact" class="nav-cta">Contact</a></li>
-    </ul>
-  </nav>
+# Fix 1: broken about/skills line
+content = content.replace(
+    '''</p<p style="margin-top:1.5rem; font-weight:500;">Skills</p>>
+    <section id="skills">
+      <h2>Skills</h2>''',
+    '''</p>
+  </section>
 
-  <section id="hero">
-    <div class="hero-text">
-      <p class="hero-label">Based in Munich, Germany</p>
-      <h1>Ahmed Ali</h1>
-      <p class="hero-tagline">Data &amp; Business Analyst</p>
-      <p class="hero-bio">Turning messy data into clear decisions. I work at the intersection of analytics, business strategy and machine learning.</p>
-      <div class="hero-links">
-        <a href="https://github.com/AhmedAli58" target="_blank" class="btn-outline">GitHub</a>
-        <a href="https://www.linkedin.com/in/ahmedali79x/" target="_blank" class="btn-outline">LinkedIn</a>
-        <a href="mailto:ahmedalli79x@gmail.com" class="btn-solid">Get in touch</a>
+  <section id="skills">
+    <h2>Skills</h2>'''
+)
+
+# Fix 2: add projects section before certifications
+projects = '''
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Credit Card Fraud Detection</h3>
+          <div class="project-tags"><span>Machine Learning</span><span>Python</span><span>Streamlit</span></div>
+        </div>
+        <p>Built an end-to-end fraud detection system using classification models on imbalanced financial transaction data. Deployed as an interactive Streamlit application.</p>
+        <div class="project-links">
+          <a href="https://credit-card-fraud-detection-33azof3lzauheeppgmaxzx.streamlit.app" target="_blank" class="btn-solid btn-sm">Live Demo</a>
+          <a href="https://github.com/AhmedAli58" target="_blank" class="btn-outline btn-sm">GitHub</a>
+        </div>
       </div>
-    </div>
-    <div class="hero-photo">
-      <img src="images/photo.jpg" alt="Ahmed Ali" />
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>AutoScout24 Car Price Analysis</h3>
+          <div class="project-tags"><span>EDA</span><span>Random Forest</span><span>Python</span></div>
+        </div>
+        <p>Analysed 120K AutoScout24 listings to uncover what drives used car prices in Germany. Random Forest model achieved R² of 0.92 on price prediction.</p>
+        <div class="project-links">
+          <a href="https://github.com/AhmedAli58/AutoScout24-Car-Price-Analysis" target="_blank" class="btn-solid btn-sm">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Olist E-Commerce Sales Analysis</h3>
+          <div class="project-tags"><span>EDA</span><span>RFM</span><span>Python</span></div>
+        </div>
+        <p>End-to-end sales strategy analysis on 100K orders from Olist, a Brazilian e-commerce marketplace. Includes RFM segmentation, YoY growth analysis and delivery performance.</p>
+        <div class="project-links">
+          <a href="https://github.com/AhmedAli58/Olist-E-Commerce-Sales-Analysis" target="_blank" class="btn-solid btn-sm">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Twitter Sentiment Analysis</h3>
+          <div class="project-tags"><span>NLP</span><span>Python</span><span>Classification</span></div>
+        </div>
+        <p>Sentiment classification pipeline on Twitter data using NLP techniques and machine learning models to detect positive, negative and neutral sentiment at scale.</p>
+        <div class="project-links">
+          <a href="https://github.com/AhmedAli58" target="_blank" class="btn-outline btn-sm">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Tabular ML Regression Pipeline</h3>
+          <div class="project-tags"><span>scikit-learn</span><span>Regression</span><span>Python</span></div>
+        </div>
+        <p>Modular end-to-end regression pipeline for tabular data covering preprocessing, feature engineering, model selection and evaluation with cross-validation.</p>
+        <div class="project-links">
+          <a href="https://github.com/AhmedAli58" target="_blank" class="btn-outline btn-sm">GitHub</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <section id="about">
-    <h2>About</h2>
-    <p class="about-text">I am a data and business analyst with experience across healthcare and commercial sectors, currently pursuing an MSc in Chemical Biotechnology at the Technical University of Munich. I build dashboards, predictive models and data pipelines that help organisations make faster, better-informed decisions.</p<p style="margin-top:1.5rem; font-weight:500;">Skills</p>>
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="skills">
-        <span>Python</span><span>SQL</span><span>Power BI</span><span>Tableau</span>
-        <span>pandas</span><span>scikit-learn</span><span>Machine Learning</span>
-        <span>PostgreSQL</span><span>dbt</span>
-        <span>AWS</span><span>GCP</span>
-        <span>Git</span>
-      </div>
-    </section>
+'''
 
-  <section id="experience">
-  <h2>Experience</h2>
-  <div class="timeline">
+content = content.replace('<section id="certifications">', projects + '<section id="certifications">')
 
-    <div class="timeline-item">
-      <div class="timeline-meta">
-        <span class="timeline-date">Oct 2023 — Mar 2024</span>
-        <span class="timeline-location">Garching, Germany</span>
-      </div>
-      <div class="timeline-content">
-        <h3>Research Intern</h3>
-        <p class="timeline-company">Center for Functional Protein Assemblies</p>
-        <ul>
-          <li>Analyzed time-series microbial growth and metabolic datasets using Python (pandas, NumPy, matplotlib), identifying drug-induced shifts in microbiome behavior across experimental conditions.</li>
-          <li>Processed high-dimensional proteomics data using log2 fold-change, two-sample t-tests, and ANOVA (scipy, statsmodels) to identify significant protein targets, supporting target prioritization and mechanism-of-action analysis.</li>
-          <li>Built end-to-end data workflows (cleaning, normalization, missing val handling) to ensure consistent cross-condition comparisons and reduce analytical noise in downstream results.</li>
-          <li>Delivered structured analyses and visualizations translating protein–microbiome interaction patterns into actionable insights for hypothesis generation in drug discovery workflows.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-meta">
-        <span class="timeline-date">Nov 2024 — Jul 2025</span>
-        <span class="timeline-location">Manhattan, Kansas, US</span>
-      </div>
-      <div class="timeline-content">
-        <h3>Business Analyst</h3>
-        <p class="timeline-company">Targon LLC</p>
-        <ul>
-          <li>Built revenue and margin dashboards tracking KPIs including contribution margin, discount rate and SKU-level profitability, improving gross margin performance by 8% over two quarters.</li>
-          <li>Analysed 20,000+ customer transaction records using SQL and Excel, reducing pricing inconsistencies stabilising monthly margin fluctuations by 12%.</li>
-          <li>Automated data preparation workflows with SQL and Python, improving reporting efficiency by 15% and minimising reconciliation errors.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-meta">
-        <span class="timeline-date">Nov 2023 — Apr 2024</span>
-        <span class="timeline-location">Islamabad, Pakistan</span>
-      </div>
-      <div class="timeline-content">
-        <h3>Data Analyst</h3>
-        <p class="timeline-company">Maroof International Hospital</p>
-        <ul>
-          <li>Designed interactive dashboards visualising utilisation rate, cost per procedure and turnaround time, improving reporting efficiency by 18%.</li>
-          <li>Analysed equipment scheduling and utilisation logs, identifying underutilised capacity that reduced idle equipment hours by 10%.</li>
-          <li>Implemented validation checks across multi-source datasets, decreasing recurring reporting corctions by approximately 30%.</li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section id="education">
-  <h2>Education</h2>
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-meta">
-        <span class="timeline-date">Apr 2024 — Present</span>
-        <span class="timeline-location">Munich, Germany</span>
-      </div>
-      <div class="timeline-content">
-        <h3>MSc Chemical Biotechnology</h3>
-        <p class="timeline-company">Technical University of Munich</p>
-
-        <div style="margin-top:1rem;">
-          <p><strong>Relevant Coursework:</strong></p>
-          <ul>
-            <li>Introduction to Deep Learning (IN2346)</li>
-            <li>AI for Biotechnology (CS0012)</li>
-          </ul>
-        </div>
-
-        <p style="font-size:0.95rem;color:#444444;line-height:1.7;margin-top:0.5rem;">
-          Recently completed a research internship at TUM's Chair of Organic Chemistry II, applying chemical proteomics to investigate gut microbiome-drug intections.
-        </p>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<section id="certifications">
-  <h2>Certifications</h2>
-  <div class="certs-grid">
-    <a href="https://www.credly.com/badges/29cad2c1-15d1-412f-9249-3cf115c61890/linked_in_profile" target="_blank" class="cert-card">
-      <p class="cert-name">Alteryx Designer Core</p>
-      <p class="cert-issuer">Alteryx</p>
-    </a>
-    <a href="https://credentials.getdbt.com/69fb949c-9ad4-4a5b-9b9d-882054bd9fff" target="_blank" class="cert-card">
-      <p class="cert-name">dbt Fundamentals</p>
-      <p class="cert-issuer">dbt Labs</p>
-    </a>
-    <a href="https://www.hackerrank.com/certificates/0b0177754b5f" target="_blank" class="cert-card">
-      <p class="cert-name">SQL Certificate</p>
-      <p class="cert-issuer">HackerRank</p>
-    </a>
-    <a href="https://www.hackerrank.com/certificates/b0d21ae80aa6" target="_blank" class="cert-card">
-      <p class="cert-name">Python Certificate</p>
-      <p class="cert-issuer">HackerRank</p>
-    </a>
-  </div>
-</section>
-<footer id="contact">
-    <h2>Get in touch</h2>
-    <p>Open to data analyst and business analyst roles in Germany and Europe.</p>
-    <a href="mailto:ahmedalli79x@gmail.com" class="btn-solid">ahmedalli79x@gmail.com</a>
-    <p class="footer-location">Munich, Germany</p>
-    <p class="footer-copy">© 2026 Ahmed Ali</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
-
-
-
+open('index.html', 'w').write(content)
+print('Done')
+print('Projects section present:', 'projects-grid' in content)
+print('Skills h2 present:', '<section id="skills">' in content)
+EOF
