@@ -372,3 +372,27 @@ section + section {
   }
 }
 
+
+/* ===== FINAL MOBILE FIX ===== */
+@media (max-width: 768px) {
+
+  .timeline {
+    display: block !important;
+  }
+
+  .timeline-item {
+    display: block !important;
+    grid-template-columns: unset !important;
+  }
+
+  .timeline-meta {
+    display: block !important;
+    margin-bottom: 6px;
+  }
+
+  .timeline-content {
+    display: block !important;
+  }
+
+}
+
