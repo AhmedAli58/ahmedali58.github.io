@@ -548,3 +548,17 @@ section {
   padding-top: 2rem !important;
   padding-bottom: 2rem !important;
 }
+/* ===== FIX ABOUT SPACING ===== */
+
+section h2 {
+  margin-bottom: 0.8rem !important;
+  padding-bottom: 0.3rem !important;
+}
+
+.about-text {
+  margin-bottom: 1rem !important;
+}
+
+#about h3 {
+  margin-top: 1rem !important;
+}
