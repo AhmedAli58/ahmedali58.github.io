@@ -518,3 +518,10 @@ section:last-of-type > p:first-of-type {
   text-align: center;
 }
 
+section {
+  padding: 1.5rem 0;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+}
