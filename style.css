@@ -529,3 +529,22 @@ section {
 h2 {
   margin-bottom: 0.5rem;
 }
+
+/* ===== FORCE REMOVE GAP + LINE ===== */
+section h2 {
+  margin-bottom: 0.5rem !important;
+  padding-bottom: 0 !important;
+  border-bottom: none !important;
+}
+
+/* tighten spacing between heading and text */
+#about h2 + p,
+#experience h2 + .timeline {
+  margin-top: 0 !important;
+}
+
+/* remove artificial section spacing */
+section {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
