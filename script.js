@@ -1,40 +1,23 @@
 // =============================
-// 1. LENIS (OPTIMIZED)
-// =============================
-const lenis = new Lenis({
-  duration: 1,
-  smooth: true
-});
-
-// IMPORTANT: Sync GSAP with Lenis (fix lag)
-lenis.on('scroll', ScrollTrigger.update);
-
-gsap.ticker.add((time) => {
-  lenis.raf(time * 1000);
-});
-
-gsap.ticker.lagSmoothing(0);
-
-// =============================
-// 2. GSAP SETUP
+// 1. GSAP SETUP
 // =============================
 gsap.registerPlugin(ScrollTrigger);
 
 // =============================
-// 3. NAV SHADOW
+// 2. NAV SHADOW (LIGHT)
 // =============================
 const nav = document.getElementById('nav');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 20) {
-    nav.style.boxShadow = '0 2px 16px rgba(0,0,0,0.08)';
+    nav.style.boxShadow = '0 2px 12px rgba(0,0,0,0.06)';
   } else {
     nav.style.boxShadow = 'none';
   }
 });
 
 // =============================
-// 4. NAV CLICK SCROLL (LENIS SAFE)
+// 3. SMOOTH SCROLL (NATIVE FAST)
 // =============================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -42,121 +25,83 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const target = document.querySelector(this.getAttribute('href'));
 
     if (target) {
-      lenis.scrollTo(target, {
-        offset: -50
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
       });
     }
   });
 });
 
 // =============================
-// 5. HERO ANIMATION (LIGHTER)
+// 4. HERO (VERY LIGHT)
 // =============================
 gsap.from(".hero-text h1", {
-  y: 40,
+  y: 30,
   opacity: 0,
-  duration: 0.8
+  duration: 0.6
 });
 
 gsap.from(".hero-tagline", {
   y: 20,
   opacity: 0,
-  duration: 0.8,
+  duration: 0.6,
   delay: 0.1
 });
 
 gsap.from(".hero-links a", {
-  y: 20,
+  y: 15,
   opacity: 0,
-  duration: 0.6,
+  duration: 0.5,
   delay: 0.2,
   stagger: 0.08
 });
 
 gsap.from(".hero-photo img", {
-  scale: 0.95,
   opacity: 0,
-  duration: 0.8,
+  duration: 0.6,
   delay: 0.2
 });
 
 // =============================
-// 6. SECTION ANIMATION (REDUCED LOAD)
+// 5. SECTION ANIMATION (ONCE ONLY)
 // =============================
-gsap.utils.toArray("section").forEach((section) => {
+gsap.utils.toArray("section").forEach(section => {
   gsap.from(section, {
     opacity: 0,
-    y: 40,
-    duration: 0.6,
-    ease: "power2.out",
+    y: 30,
+    duration: 0.5,
     scrollTrigger: {
       trigger: section,
-      start: "top 90%",
-      once: true   // KEY: runs only once → performance boost
+      start: "top 92%",
+      once: true // critical for performance
     }
   });
 });
 
 // =============================
-// 7. PROJECT CARDS (THROTTLED)
+// 6. TIMELINE (LIGHT)
 // =============================
-document.querySelectorAll(".project-card").forEach(card => {
-
-  let ticking = false;
-
-  card.addEventListener("mousemove", (e) => {
-    if (ticking) return;
-
-    requestAnimationFrame(() => {
-      const rect = card.getBoundingClientRect();
-
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      const rotateX = -(y - rect.height / 2) / 20;
-      const rotateY = (x - rect.width / 2) / 20;
-
-      gsap.to(card, {
-        rotateX,
-        rotateY,
-        duration: 0.2,
-        ease: "power1.out"
-      });
-
-      ticking = false;
-    });
-
-    ticking = true;
-  });
-
-  card.addEventListener("mouseleave", () => {
-    gsap.to(card, {
-      rotateX: 0,
-      rotateY: 0,
-      duration: 0.3
-    });
-  });
-
-});
-
-// =============================
-// 8. TIMELINE (LIGHT)
-// =============================
-gsap.utils.toArray(".timeline-item").forEach((item) => {
+gsap.utils.toArray(".timeline-item").forEach(item => {
   gsap.from(item, {
     opacity: 0,
-    x: -30,
-    duration: 0.5,
+    x: -20,
+    duration: 0.4,
     scrollTrigger: {
       trigger: item,
-      start: "top 92%",
+      start: "top 95%",
       once: true
     }
   });
 });
 
 // =============================
-// 9. NAV ACTIVE LINK
+// 7. PROJECT CARDS (CSS ONLY)
+// =============================
+// No JS tilt → removes lag completely
+
+// =============================
+// 8. NAV ACTIVE LINK (LIGHT)
 // =============================
 const sections = document.querySelectorAll("section");
 
@@ -164,8 +109,8 @@ window.addEventListener("scroll", () => {
   let current = "";
 
   sections.forEach(sec => {
-    if (window.scrollY >= sec.offsetTop - 120) {
-      current = sec.getAttribute("id");
+    if (window.scrollY >= sec.offsetTop - 100) {
+      current = sec.id;
     }
   });
 
