@@ -317,59 +317,47 @@ section h2 {
   border-color: #1a6b4a;
 }
 
-/* PROJECT CARDS — BIG UPGRADE */
+/* ===== FORCE MODERN UI ===== */
+
+/* BODY */
+body {
+  background: linear-gradient(135deg, #f8faf9, #eef7f1) !important;
+}
+
+/* HERO TEXT */
+.hero-text h1 {
+  background: linear-gradient(90deg, #0f0f0f, #1a6b4a) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* PROJECT CARDS */
 .project-card {
-  background: rgba(255,255,255,0.7);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
+  background: rgba(255,255,255,0.85) !important;
+  border: 1px solid rgba(0,0,0,0.05) !important;
+  backdrop-filter: blur(6px) !important;
+  transition: all 0.3s ease !important;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-  border-color: #1a6b4a;
+  transform: translateY(-6px) !important;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1) !important;
 }
 
-/* SKILLS TAGS */
-.skills span {
-  transition: all 0.2s ease;
+/* BUTTONS */
+.btn-solid:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1) !important;
 }
 
-.skills span:hover {
-  background: #e8f5ee;
-  color: #1a6b4a;
-}
-
-/* TIMELINE CLEANUP */
-.timeline-item {
-  transition: transform 0.2s ease;
-}
-
-.timeline-item:hover {
-  transform: translateX(4px);
-}
-
-/* NAV MODERN LOOK */
+/* NAV */
 #nav {
-  backdrop-filter: blur(10px);
-  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px) !important;
+  background: rgba(255,255,255,0.9) !important;
 }
 
-/* NAV ACTIVE LINK */
-#nav a.active {
-  color: #1a6b4a;
-  border-bottom: 2px solid #1a6b4a;
-}
-
-/* CERT CARDS */
-.cert-card {
-  background: rgba(255,255,255,0.7);
-  backdrop-filter: blur(6px);
-  transition: all 0.25s ease;
-}
-
-.cert-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+/* SKILLS */
+.skills span:hover {
+  background: #e8f5ee !important;
+  color: #1a6b4a !important;
 }
