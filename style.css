@@ -273,3 +273,103 @@ html {
 .project-card {
   transform: translateZ(0);
 }
+
+/* =========================
+   MODERN UI UPGRADE (SAFE)
+========================= */
+
+/* Background depth */
+body {
+  background: linear-gradient(135deg, #f8faf9, #eef7f1);
+}
+
+/* Section spacing refinement */
+section {
+  padding: 4rem 0;
+}
+
+/* Headings refinement */
+section h2 {
+  font-size: 2.2rem;
+  letter-spacing: -0.5px;
+}
+
+/* HERO IMPROVEMENT */
+.hero-text h1 {
+  background: linear-gradient(90deg, #0f0f0f, #1a6b4a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* BUTTON MODERN FEEL */
+.btn-solid,
+.btn-outline {
+  transition: all 0.25s ease;
+}
+
+.btn-solid:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.btn-outline:hover {
+  background: #e8f5ee;
+  border-color: #1a6b4a;
+}
+
+/* PROJECT CARDS — BIG UPGRADE */
+.project-card {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  border-color: #1a6b4a;
+}
+
+/* SKILLS TAGS */
+.skills span {
+  transition: all 0.2s ease;
+}
+
+.skills span:hover {
+  background: #e8f5ee;
+  color: #1a6b4a;
+}
+
+/* TIMELINE CLEANUP */
+.timeline-item {
+  transition: transform 0.2s ease;
+}
+
+.timeline-item:hover {
+  transform: translateX(4px);
+}
+
+/* NAV MODERN LOOK */
+#nav {
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.85);
+}
+
+/* NAV ACTIVE LINK */
+#nav a.active {
+  color: #1a6b4a;
+  border-bottom: 2px solid #1a6b4a;
+}
+
+/* CERT CARDS */
+.cert-card {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(6px);
+  transition: all 0.25s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
