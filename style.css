@@ -210,3 +210,96 @@ footer {
     font-size: 0.8rem;
   }
 }
+
+/* =========================
+   MISSING COMPONENT SYSTEM
+========================= */
+
+/* PROJECT LINKS */
+.project-links {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-sm {
+  font-size: 0.8rem;
+  padding: 0.4rem 0.9rem;
+}
+
+/* CERTIFICATIONS */
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.cert-card {
+  display: block;
+  padding: 1.2rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 10px;
+  background: white;
+  transition: all 0.25s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.cert-name {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--black);
+  margin-bottom: 0.3rem;
+}
+
+.cert-issuer {
+  font-size: 0.8rem;
+  color: var(--green);
+}
+
+/* TIMELINE DETAILS */
+.timeline-meta {
+  font-size: 0.85rem;
+}
+
+.timeline-date {
+  color: var(--green);
+  display: block;
+}
+
+.timeline-location {
+  color: var(--gray-500);
+}
+
+.timeline-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-company {
+  color: var(--green);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* FOOTER FIX */
+footer {
+  text-align: center;
+  padding: 4rem 1.5rem;
+  background: var(--gray-100);
+}
+
+.footer-location {
+  margin-top: 1rem;
+  color: var(--gray-500);
+}
+
+.footer-copy {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--gray-500);
+}
