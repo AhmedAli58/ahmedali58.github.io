@@ -1,16 +1,19 @@
 // =============================
-// 1. SMOOTH SCROLL (LENIS)
+// 1. LENIS (OPTIMIZED)
 // =============================
 const lenis = new Lenis({
-  duration: 1.2,
+  duration: 1,
   smooth: true
 });
 
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-requestAnimationFrame(raf);
+// IMPORTANT: Sync GSAP with Lenis (fix lag)
+lenis.on('scroll', ScrollTrigger.update);
+
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000);
+});
+
+gsap.ticker.lagSmoothing(0);
 
 // =============================
 // 2. GSAP SETUP
@@ -18,7 +21,7 @@ requestAnimationFrame(raf);
 gsap.registerPlugin(ScrollTrigger);
 
 // =============================
-// 3. NAV SHADOW (KEEP EXISTING BEHAVIOR)
+// 3. NAV SHADOW
 // =============================
 const nav = document.getElementById('nav');
 
@@ -31,7 +34,7 @@ window.addEventListener('scroll', () => {
 });
 
 // =============================
-// 4. SMOOTH SCROLL (KEEP LINKS WORKING)
+// 4. NAV CLICK SCROLL (LENIS SAFE)
 // =============================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -40,114 +43,120 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
     if (target) {
       lenis.scrollTo(target, {
-        offset: -50,
-        duration: 1.2
+        offset: -50
       });
     }
   });
 });
 
 // =============================
-// 5. HERO ANIMATION
+// 5. HERO ANIMATION (LIGHTER)
 // =============================
 gsap.from(".hero-text h1", {
-  y: 50,
+  y: 40,
   opacity: 0,
-  duration: 1,
-  ease: "power3.out"
+  duration: 0.8
 });
 
 gsap.from(".hero-tagline", {
-  y: 30,
+  y: 20,
   opacity: 0,
-  duration: 1,
-  delay: 0.2
+  duration: 0.8,
+  delay: 0.1
 });
 
 gsap.from(".hero-links a", {
   y: 20,
   opacity: 0,
-  duration: 0.8,
-  delay: 0.4,
-  stagger: 0.1
+  duration: 0.6,
+  delay: 0.2,
+  stagger: 0.08
 });
 
 gsap.from(".hero-photo img", {
-  scale: 0.9,
+  scale: 0.95,
   opacity: 0,
-  duration: 1,
-  delay: 0.5
+  duration: 0.8,
+  delay: 0.2
 });
 
 // =============================
-// 6. SECTION SCROLL ANIMATIONS
+// 6. SECTION ANIMATION (REDUCED LOAD)
 // =============================
 gsap.utils.toArray("section").forEach((section) => {
   gsap.from(section, {
     opacity: 0,
-    y: 60,
-    duration: 1,
-    ease: "power3.out",
+    y: 40,
+    duration: 0.6,
+    ease: "power2.out",
     scrollTrigger: {
       trigger: section,
-      start: "top 85%",
+      start: "top 90%",
+      once: true   // KEY: runs only once → performance boost
     }
   });
 });
 
 // =============================
-// 7. PROJECT CARD INTERACTION
+// 7. PROJECT CARDS (THROTTLED)
 // =============================
 document.querySelectorAll(".project-card").forEach(card => {
 
+  let ticking = false;
+
   card.addEventListener("mousemove", (e) => {
-    const rect = card.getBoundingClientRect();
+    if (ticking) return;
 
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+    requestAnimationFrame(() => {
+      const rect = card.getBoundingClientRect();
 
-    const rotateX = -(y - rect.height / 2) / 15;
-    const rotateY = (x - rect.width / 2) / 15;
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
 
-    gsap.to(card, {
-      rotateX,
-      rotateY,
-      transformPerspective: 800,
-      duration: 0.3,
-      ease: "power2.out"
+      const rotateX = -(y - rect.height / 2) / 20;
+      const rotateY = (x - rect.width / 2) / 20;
+
+      gsap.to(card, {
+        rotateX,
+        rotateY,
+        duration: 0.2,
+        ease: "power1.out"
+      });
+
+      ticking = false;
     });
+
+    ticking = true;
   });
 
   card.addEventListener("mouseleave", () => {
     gsap.to(card, {
       rotateX: 0,
       rotateY: 0,
-      duration: 0.5,
-      ease: "power2.out"
+      duration: 0.3
     });
   });
 
 });
 
 // =============================
-// 8. TIMELINE ANIMATION
+// 8. TIMELINE (LIGHT)
 // =============================
-gsap.utils.toArray(".timeline-item").forEach((item, i) => {
+gsap.utils.toArray(".timeline-item").forEach((item) => {
   gsap.from(item, {
     opacity: 0,
-    x: -40,
-    duration: 0.8,
-    delay: i * 0.1,
-    ease: "power3.out",
+    x: -30,
+    duration: 0.5,
     scrollTrigger: {
       trigger: item,
-      start: "top 90%"
+      start: "top 92%",
+      once: true
     }
   });
 });
 
 // =============================
-// 9. NAV ACTIVE LINK HIGHLIGHT
+// 9. NAV ACTIVE LINK
 // =============================
 const sections = document.querySelectorAll("section");
 
