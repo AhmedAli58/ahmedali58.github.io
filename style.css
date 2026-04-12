@@ -252,3 +252,24 @@ footer p {
   #nav ul { gap: 1rem; }
   #nav ul li:not(:last-child) { display: none; }
 }
+
+...your existing CSS code above...
+
+}  /* last closing bracket of your file */
+
+
+/* ===== PERFORMANCE FIX (ADD BELOW THIS LINE) ===== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.project-card,
+.timeline-item,
+.hero-photo img {
+  will-change: transform;
+}
+
+.project-card {
+  transform: translateZ(0);
+}
