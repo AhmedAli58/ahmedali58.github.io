@@ -6,19 +6,32 @@
   <meta name="description" content="Ahmed Ali — Data & Business Analyst based in Munich, Germany." />
   <meta name="author" content="Ahmed Ali" />
   <title>Ahmed Ali — Data Analyst</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ahmed Ali — Data Analyst" />
+  <meta property="og:description" content="Ahmed Ali — Data & Business Analyst based in Munich, Germany." />
+  <meta property="og:image" content="images/photo.jpg" />
+  <meta property="og:url" content="https://ahmedali58.github.io/" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ahmed Ali — Data Analyst" />
+  <meta name="twitter:description" content="Ahmed Ali — Data & Business Analyst based in Munich, Germany." />
+  <meta name="twitter:image" content="images/photo.jpg" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script src="./script.js"></script>
-
 <body>
 
-  <nav id="nav">
+  <nav id="nav" aria-label="Primary">
     <span class="nav-name">Ahmed Ali</span>
     <ul>
       <li><a href="#about">About</a></li>
@@ -29,28 +42,30 @@
     </ul>
   </nav>
 
+  <main>
+
   <section id="hero">
     <div class="hero-text">
       <h1>Ahmed Ali</h1>
       <p class="hero-tagline">Data Analyst</p>
       <div class="hero-links">
-        <a href="https://github.com/AhmedAli58" target="_blank" class="btn-outline">GitHub</a>
-        <a href="https://www.linkedin.com/in/ahmedali79x/" target="_blank" class="btn-outline">LinkedIn</a>
+        <a href="https://github.com/AhmedAli58" target="_blank" rel="noopener noreferrer" class="btn-outline">GitHub</a>
+        <a href="https://www.linkedin.com/in/ahmedali79x/" target="_blank" rel="noopener noreferrer" class="btn-outline">LinkedIn</a>
         <a href="mailto:ahmedalli79x@gmail.com" class="btn-solid">Get in touch</a>
       </div>
     </div>
     <div class="hero-photo">
-      <img src="images/photo.jpg" alt="Ahmed Ali" />
+      <img src="images/photo.jpg" alt="Ahmed Ali" width="280" height="280" />
     </div>
   </section>
 
   <section id="about">
     <h2>About</h2>
-    <p class="about-text">Ahmed is a Data Analyst working across business operations and biological data, with experience in healthcare, operations, and bioinformatics. Currently pursuing a Master’s degree in Chemical Biotechnology at the Technical University of Munich, he applies analytical methods to solve real-world problems involving complex datasets..</p>
+    <p class="about-text">Ahmed is a Data Analyst working across business operations and biological data, with experience in healthcare, operations, and bioinformatics. Currently pursuing a Master’s degree in Chemical Biotechnology at the Technical University of Munich, he applies analytical methods to solve real-world problems involving complex datasets.</p>
     <h3 style="margin:1.5rem 0 0.8rem;font-weight:500;">Skills</h3>
 <div class="skills">
 <span>Python</span><span>R</span><span>SQL</span><span>Power BI</span>
-<span>Big Query</span><span>Snowflake</span><span>Machine Learning</span>
+<span>BigQuery</span><span>Snowflake</span><span>Machine Learning</span>
 <span>Excel</span><span>GCP</span><span>Git</span><span>dbt</span>
 </div>
   </section>
@@ -129,8 +144,8 @@
         </div>
         <p>Built an end-to-end fraud detection system using classification models on imbalanced financial transaction data. Deployed as an interactive Streamlit application.</p>
         <div class="project-links">
-          <a href="https://credit-card-fraud-detection-33azof3lzauheeppgmaxzx.streamlit.app" target="_blank" class="btn-solid btn-sm">Live Demo</a>
-          <a href="https://github.com/AhmedAli58" target="_blank" class="btn-outline btn-sm">GitHub</a>
+          <a href="https://credit-card-fraud-detection-33azof3lzauheeppgmaxzx.streamlit.app" target="_blank" rel="noopener noreferrer" class="btn-solid btn-sm">Live Demo</a>
+          <a href="https://github.com/AhmedAli58" target="_blank" rel="noopener noreferrer" class="btn-outline btn-sm">GitHub</a>
         </div>
       </div>
 
@@ -141,7 +156,7 @@
         </div>
         <p>Analysed 120K AutoScout24 listings to uncover what drives used car prices in Germany. Random Forest model achieved R² of 0.92 on price prediction.</p>
         <div class="project-links">
-          <a href="https://github.com/AhmedAli58/AutoScout24-Car-Price-Analysis" target="_blank" class="btn-solid btn-sm">GitHub</a>
+          <a href="https://github.com/AhmedAli58/AutoScout24-Car-Price-Analysis" target="_blank" rel="noopener noreferrer" class="btn-solid btn-sm">GitHub</a>
         </div>
       </div>
 
@@ -152,7 +167,7 @@
         </div>
         <p>End-to-end sales strategy analysis on 100K orders from Olist, a Brazilian e-commerce marketplace. Includes RFM segmentation, YoY growth analysis and delivery performance.</p>
         <div class="project-links">
-          <a href="https://github.com/AhmedAli58/Olist-E-Commerce-Sales-Analysis" target="_blank" class="btn-solid btn-sm">GitHub</a>
+          <a href="https://github.com/AhmedAli58/Olist-E-Commerce-Sales-Analysis" target="_blank" rel="noopener noreferrer" class="btn-solid btn-sm">GitHub</a>
         </div>
       </div>
 
@@ -163,7 +178,7 @@
         </div>
         <p>Sentiment classification pipeline on Twitter data using NLP techniques and machine learning models to detect positive, negative and neutral sentiment at scale.</p>
         <div class="project-links">
-          <a href="https://github.com/AhmedAli58" target="_blank" class="btn-outline btn-sm">GitHub</a>
+          <a href="https://github.com/AhmedAli58" target="_blank" rel="noopener noreferrer" class="btn-outline btn-sm">GitHub</a>
         </div>
       </div>
 
@@ -174,7 +189,7 @@
         </div>
         <p>Modular end-to-end regression pipeline for tabular data covering preprocessing, feature engineering, model selection and evaluation with cross-validation.</p>
         <div class="project-links">
-          <a href="https://github.com/AhmedAli58" target="_blank" class="btn-outline btn-sm">GitHub</a>
+          <a href="https://github.com/AhmedAli58" target="_blank" rel="noopener noreferrer" class="btn-outline btn-sm">GitHub</a>
         </div>
       </div>
 
@@ -184,19 +199,19 @@
   <section id="certifications">
     <h2>Certifications</h2>
     <div class="certs-grid">
-      <a href="https://www.credly.com/badges/29cad2c1-15d1-412f-9249-3cf115c61890/linked_in_profile" target="_blank" class="cert-card">
+      <a href="https://www.credly.com/badges/29cad2c1-15d1-412f-9249-3cf115c61890/linked_in_profile" target="_blank" rel="noopener noreferrer" class="cert-card">
         <p class="cert-name">Alteryx Designer Core</p>
         <p class="cert-issuer">Alteryx</p>
       </a>
-      <a href="https://credentials.getdbt.com/69fb949c-9ad4-4a5b-9b9d-882054bd9fff" target="_blank" class="cert-card">
+      <a href="https://credentials.getdbt.com/69fb949c-9ad4-4a5b-9b9d-882054bd9fff" target="_blank" rel="noopener noreferrer" class="cert-card">
         <p class="cert-name">dbt Fundamentals</p>
         <p class="cert-issuer">dbt Labs</p>
       </a>
-      <a href="https://www.hackerrank.com/certificates/0b0177754b5f" target="_blank" class="cert-card">
+      <a href="https://www.hackerrank.com/certificates/0b0177754b5f" target="_blank" rel="noopener noreferrer" class="cert-card">
         <p class="cert-name">SQL Certificate</p>
         <p class="cert-issuer">HackerRank</p>
       </a>
-      <a href="https://www.hackerrank.com/certificates/b0d21ae80aa6" target="_blank" class="cert-card">
+      <a href="https://www.hackerrank.com/certificates/b0d21ae80aa6" target="_blank" rel="noopener noreferrer" class="cert-card">
         <p class="cert-name">Python Certificate</p>
         <p class="cert-issuer">HackerRank</p>
       </a>
@@ -220,6 +235,7 @@
   </div>
 </section>
 
+  </main>
 
   <footer id="contact">
     <h2>Get in touch</h2>
@@ -227,6 +243,10 @@
     <p class="footer-location">Munich, Germany</p>
     <p class="footer-copy">&copy; 2026 Ahmed Ali</p>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <script src="./script.js" defer></script>
 
 </body>
 </html>
